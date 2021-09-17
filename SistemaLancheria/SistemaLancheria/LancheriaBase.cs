@@ -9,6 +9,7 @@ namespace SistemaLancheria
 	class LancheriaBase
 	{
         Mesas mesas;
+        Cliente cliente;
 
         public LancheriaBase(int QtdMesas)
 		{
@@ -40,7 +41,7 @@ namespace SistemaLancheria
             switch (PedeInteiro())
             {
                 case 1:
-                    new RealizaPedido(mesas).Realizar();                  
+                    new RealizaPedido(mesas, cliente).Realizar();                  
                     ContinuaWhile = false;
                     break;
                 case -1:

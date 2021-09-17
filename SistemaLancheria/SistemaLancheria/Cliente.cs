@@ -8,14 +8,13 @@ namespace SistemaLancheria
 {
 	class Cliente
 	{
-		int IDCliente;
-		int IDMesa;
-		Pedido PedidoCliente;
-
+		public int IDCliente { get; }
+		public int IDMesa { get; private set; }
+		public Pedido PedidoCliente { get; private set; }
 		public Cliente(int IDCliente, int IDMesa)
 		{
 			this.IDCliente = IDCliente;
-			this.IDMesa = IDMesa;
+			this.IDMesa = IDMesa;			
 		}
 	}
 }

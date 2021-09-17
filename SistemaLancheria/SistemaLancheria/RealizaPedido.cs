@@ -9,10 +9,12 @@ namespace SistemaLancheria
 	class RealizaPedido
 	{
 		Mesas mesas;
+		Cliente ClienteAtual;
 
-		public RealizaPedido(Mesas mesas)
+		public RealizaPedido(Mesas mesas, Cliente ClienteAtual)
 		{
 			this.mesas = mesas;
+			this.ClienteAtual = ClienteAtual;
 		}
 		public void Realizar()
 		{
@@ -59,8 +61,8 @@ namespace SistemaLancheria
 
 		void RegistraMesa(int MesaEscolhida)
 		{
-			Console.WriteLine(MesaEscolhida);
-			Console.ReadLine();
+			mesas.Mesa[MesaEscolhida] = Mesas.Status.Ocupada;
+			ClienteAtual = new Cliente(1, MesaEscolhida);
 		}
 
 		int PedeInteiroMesa(ref int MesaEscolhida)

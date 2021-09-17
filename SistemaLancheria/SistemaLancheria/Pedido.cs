@@ -8,33 +8,40 @@ namespace SistemaLancheria
 {
 	class Pedido
 	{
-		public double ValorTotal
-		{
-			get
-			{
-				return ValorTotal;
-			}
-			set
-			{
-				ValorTotal += value;
-			}
-		}
+		public double ValorTotal { get; private set; }
 
 		public List<Produto> ListaProdutos { get; }
 
 		public Pedido()
 		{
-
+			ListaProdutos = new List<Produto>();
 		}
 
-		public void AdicionarListaProdutos(Produto ProdutoNovo)
+		public int AdicionarProduto(Produto ProdutoNovo)
 		{
-			ListaProdutos.Add(ProdutoNovo);
+			if (AdicionarListaProdutos(ProdutoNovo))
+			{
+				ValorTotal += ProdutoNovo.ValorUnitario;
+				return 1;
+			}
+			else
+			{
+				return 0;
+			}
 		}
 
-		public void RemoverDeListaProdutosID(int IDRemocao)
+		public bool AdicionarListaProdutos(Produto ProdutoNovo)
 		{
-			ListaProdutos.RemoveAt(IDRemocao);
+			try
+			{
+				ListaProdutos.Add(ProdutoNovo);
+				return true;
+			}catch(Exception e)
+			{
+				Console.WriteLine("Ocorreu um erro ao tentar adicionar à lista de produtos");
+				return false;
+			}
+				
 		}
 	}
 }

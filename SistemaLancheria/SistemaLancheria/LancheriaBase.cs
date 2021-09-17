@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace SistemaLancheria
 {
-	class Program
+	class LancheriaBase
 	{
-		static void Main(string[] args)
+		public void IniciarSistema()
 		{
-			new LancheriaBase().IniciarSistema();
+			Console.WriteLine("Hello Lancheria!");
+			Console.ReadLine();
 		}
 	}
 }

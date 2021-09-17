@@ -1,0 +1,7 @@
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\SistemaLancheria\obj\Debug\SistemaLancheria.csprojAssemblyReference.cache
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\SistemaLancheria\obj\Debug\SistemaLancheria.csproj.CoreCompileInputs.cache
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\SistemaLancheria\bin\Debug\SistemaLancheria.exe.config
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\SistemaLancheria\bin\Debug\SistemaLancheria.exe
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\SistemaLancheria\bin\Debug\SistemaLancheria.pdb
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\SistemaLancheria\obj\Debug\SistemaLancheria.exe
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\SistemaLancheria\obj\Debug\SistemaLancheria.pdb

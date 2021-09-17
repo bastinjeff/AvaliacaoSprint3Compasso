@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace SistemaLancheria
 {
-	class Program
+	class Cliente
 	{
-		static void Main(string[] args)
+		int IDCliente;
+		Pedido PedidoCliente;
+
+		public Cliente(int IDCliente)
 		{
-			new LancheriaBase().IniciarSistema();
+			this.IDCliente = IDCliente;
 		}
 	}
 }

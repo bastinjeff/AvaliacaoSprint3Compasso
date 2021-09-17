@@ -9,11 +9,13 @@ namespace SistemaLancheria
 	class Cliente
 	{
 		int IDCliente;
+		int IDMesa;
 		Pedido PedidoCliente;
 
-		public Cliente(int IDCliente)
+		public Cliente(int IDCliente, int IDMesa)
 		{
 			this.IDCliente = IDCliente;
+			this.IDMesa = IDMesa;
 		}
 	}
 }

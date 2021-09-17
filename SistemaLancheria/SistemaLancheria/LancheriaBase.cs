@@ -8,6 +8,13 @@ namespace SistemaLancheria
 {
 	class LancheriaBase
 	{
+        Mesas mesas;
+
+        public LancheriaBase(int QtdMesas)
+		{
+            mesas = new Mesas(QtdMesas);
+		}
+
 		public void IniciarSistema()
 		{
             MenuInicial();

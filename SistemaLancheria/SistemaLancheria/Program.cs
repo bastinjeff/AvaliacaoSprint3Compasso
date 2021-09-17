@@ -10,7 +10,7 @@ namespace SistemaLancheria
 	{
 		static void Main(string[] args)
 		{
-			new LancheriaBase().IniciarSistema();
+			new LancheriaBase(4).IniciarSistema();
 		}
 	}
 }

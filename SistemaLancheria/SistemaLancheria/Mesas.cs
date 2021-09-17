@@ -14,7 +14,7 @@ namespace SistemaLancheria
 			Ocupada
 		}
 
-		Dictionary<int, Status> Mesa;
+		public Dictionary<int, Status> Mesa { get; private set; }
 
 		public Mesas(int QtdMesas)
 		{

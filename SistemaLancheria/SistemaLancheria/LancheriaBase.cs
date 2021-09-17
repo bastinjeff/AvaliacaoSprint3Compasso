@@ -18,7 +18,7 @@ namespace SistemaLancheria
 		public void IniciarSistema()
 		{
             MenuInicial();
-        #if DEBUG_MENU
+        #if DEBUG_FIM_MENU
             Console.WriteLine("Fim do Programa, tecle enter para fechar");
             Console.ReadLine();
         #endif
@@ -40,7 +40,7 @@ namespace SistemaLancheria
             switch (PedeInteiro())
             {
                 case 1:
-                    Console.WriteLine("Entrou!");                   
+                    new RealizaPedido(mesas).Realizar();                  
                     ContinuaWhile = false;
                     break;
                 case -1:
@@ -52,7 +52,7 @@ namespace SistemaLancheria
                     ContinuaWhile = false;
                     break;
                 default:
-                    Console.WriteLine("Resposta Inválçida, por favor digite entre as opções apresentadas");
+                    Console.WriteLine("Resposta Inválida, por favor digite entre as opções apresentadas");
                     Console.WriteLine("<Tecle Enter para Continuar>");
                     Console.ReadLine();
                     break;

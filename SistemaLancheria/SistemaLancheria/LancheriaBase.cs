@@ -11,6 +11,10 @@ namespace SistemaLancheria
 		public void IniciarSistema()
 		{
             MenuInicial();
+        #if DEBUG_MENU
+            Console.WriteLine("Fim do Programa, tecle enter para fechar");
+            Console.ReadLine();
+        #endif
 		}
 
         void MenuInicial()
@@ -19,29 +23,34 @@ namespace SistemaLancheria
             do
             {
                 ApresentacaoInicial();
-            
-			    switch (PedeInteiro())
-			    {
-                    case 1:
-                        //ClasseInciarPedido
-                        ContinuaWhile = false;
-                        break;
-                    case -1:
-                        Console.WriteLine("Resposta Inválida, por favor digite um numero inteiro positivo");
-                        Console.WriteLine("<Tecle Enter para Continuar>");
-                        Console.ReadLine();
-                        break;
-                    case 2:
-                        ContinuaWhile = false;
-                        break;
-                    default:
-                        Console.WriteLine("Resposta Inválçida, por favor digite entre as opções apresentadas");
-                        Console.WriteLine("<Tecle Enter para Continuar>");
-                        Console.ReadLine();
-                        break;
-			    }
+                SwitchCaseInicial(ref ContinuaWhile);
+			    
             } while (ContinuaWhile);
 		}
+
+        void SwitchCaseInicial(ref bool ContinuaWhile)
+		{
+            switch (PedeInteiro())
+            {
+                case 1:
+                    Console.WriteLine("Entrou!");                   
+                    ContinuaWhile = false;
+                    break;
+                case -1:
+                    Console.WriteLine("Resposta Inválida, por favor digite um numero inteiro positivo");
+                    Console.WriteLine("<Tecle Enter para Continuar>");
+                    Console.ReadLine();
+                    break;
+                case 2:
+                    ContinuaWhile = false;
+                    break;
+                default:
+                    Console.WriteLine("Resposta Inválçida, por favor digite entre as opções apresentadas");
+                    Console.WriteLine("<Tecle Enter para Continuar>");
+                    Console.ReadLine();
+                    break;
+            }
+        }
 
 	    void ApresentacaoInicial()
 		{

@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Atributos.cs" />
+    <Compile Include="AtributosRoot.cs" />
+    <Compile Include="Classe.cs" />
+    <Compile Include="ClassesRoot.cs" />
+    <Compile Include="IDataService.cs" />
+    <Compile Include="IdsRoot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

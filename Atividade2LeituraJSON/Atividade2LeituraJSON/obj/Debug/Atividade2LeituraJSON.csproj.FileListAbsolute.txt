@@ -1,0 +1,7 @@
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\bin\Debug\Atividade2LeituraJSON.exe.config
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\bin\Debug\Atividade2LeituraJSON.exe
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\bin\Debug\Atividade2LeituraJSON.pdb
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\obj\Debug\Atividade2LeituraJSON.csprojAssemblyReference.cache
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\obj\Debug\Atividade2LeituraJSON.csproj.CoreCompileInputs.cache
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\obj\Debug\Atividade2LeituraJSON.exe
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\obj\Debug\Atividade2LeituraJSON.pdb

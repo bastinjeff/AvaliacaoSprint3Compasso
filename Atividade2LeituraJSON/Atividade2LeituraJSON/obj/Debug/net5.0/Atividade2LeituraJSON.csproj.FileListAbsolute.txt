@@ -1,0 +1,16 @@
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\bin\Debug\net5.0\Atividade2LeituraJSON.exe
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\bin\Debug\net5.0\Atividade2LeituraJSON.deps.json
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\bin\Debug\net5.0\Atividade2LeituraJSON.runtimeconfig.json
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\bin\Debug\net5.0\Atividade2LeituraJSON.runtimeconfig.dev.json
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\bin\Debug\net5.0\Atividade2LeituraJSON.dll
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\bin\Debug\net5.0\ref\Atividade2LeituraJSON.dll
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\bin\Debug\net5.0\Atividade2LeituraJSON.pdb
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\obj\Debug\net5.0\Atividade2LeituraJSON.csprojAssemblyReference.cache
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\obj\Debug\net5.0\Atividade2LeituraJSON.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\obj\Debug\net5.0\Atividade2LeituraJSON.AssemblyInfoInputs.cache
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\obj\Debug\net5.0\Atividade2LeituraJSON.AssemblyInfo.cs
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\obj\Debug\net5.0\Atividade2LeituraJSON.csproj.CoreCompileInputs.cache
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\obj\Debug\net5.0\Atividade2LeituraJSON.dll
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\obj\Debug\net5.0\ref\Atividade2LeituraJSON.dll
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\obj\Debug\net5.0\Atividade2LeituraJSON.pdb
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\Atividade2LeituraJSON\Atividade2LeituraJSON\obj\Debug\net5.0\Atividade2LeituraJSON.genruntimeconfig.cache

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace SistemaLancheria
 {
@@ -22,6 +25,29 @@ namespace SistemaLancheria
 		{
 			EscolheMesa();
 			EscolheProdutos();
+			ExibeJSONPedido();
+		}
+
+		void ExibeJSONPedido()
+		{
+			Console.Clear();			
+			var PedidoSerializadoWebScript = new JavaScriptSerializer().Serialize(ClienteAtual.PedidoCliente);
+			Console.ForegroundColor = ConsoleColor.Red;
+			Console.WriteLine("Apresentando JSON usando JavaScriptSerializer:");
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.WriteLine(PedidoSerializadoWebScript);
+			Console.WriteLine();
+
+			Console.ForegroundColor = ConsoleColor.Red;
+			Console.WriteLine("Apresentando JSON usando NewtonSoft (Formatado a partir da string JSON anterior):");
+			Console.ForegroundColor = ConsoleColor.White;
+			var Token = JToken.Parse(PedidoSerializadoWebScript);
+			Console.WriteLine(Token.ToString(Formatting.Indented));
+			Console.WriteLine();
+
+			Console.WriteLine("<Pressione Enter para continuar>");
+			Console.ReadLine();
+
 		}
 
 		void EscolheProdutos()
@@ -66,7 +92,8 @@ namespace SistemaLancheria
 				} while (ContinuaLoopEscolhaProduto);
 			} while (ContinuaLoopPedidos);
 			Console.Clear();
-			ExibePedido();			
+			ExibePedido();
+			Console.WriteLine("<Pressione Enter para Continuar");
 		}
 
 		void ExibePedido()

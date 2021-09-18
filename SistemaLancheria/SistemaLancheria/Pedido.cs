@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,13 @@ using System.Threading.Tasks;
 
 namespace SistemaLancheria
 {
+	[JsonObject]
 	class Pedido
 	{
+		[JsonProperty]
 		public double ValorTotal { get; private set; }
 
+		[JsonProperty]
 		public List<Produto> ListaProdutos { get; private set; }
 
 		public Pedido()

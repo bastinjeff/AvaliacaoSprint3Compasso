@@ -5,3 +5,6 @@ C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\Sistem
 C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\SistemaLancheria\bin\Debug\SistemaLancheria.pdb
 C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\SistemaLancheria\obj\Debug\SistemaLancheria.exe
 C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\SistemaLancheria\obj\Debug\SistemaLancheria.pdb
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\SistemaLancheria\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\SistemaLancheria\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jrfri\Documents\GitHub\AvaliacaoSprint3Compasso\SistemaLancheria\SistemaLancheria\obj\Debug\SistemaLancheria.csproj.CopyComplete

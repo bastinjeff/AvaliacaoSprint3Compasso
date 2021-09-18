@@ -14,7 +14,8 @@ namespace SistemaLancheria
 		public Cliente(int IDCliente, int IDMesa)
 		{
 			this.IDCliente = IDCliente;
-			this.IDMesa = IDMesa;			
+			this.IDMesa = IDMesa;
+			PedidoCliente = new Pedido();
 		}
 	}
 }

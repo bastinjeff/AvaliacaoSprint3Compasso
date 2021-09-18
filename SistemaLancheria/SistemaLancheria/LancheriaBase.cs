@@ -10,10 +10,12 @@ namespace SistemaLancheria
 	{
         Mesas mesas;
         Cliente cliente;
+        Cardapio cardapio;
 
         public LancheriaBase(int QtdMesas)
 		{
             mesas = new Mesas(QtdMesas);
+            cardapio = new Cardapio();
 		}
 
 		public void IniciarSistema()
@@ -41,7 +43,7 @@ namespace SistemaLancheria
             switch (PedeInteiro())
             {
                 case 1:
-                    new RealizaPedido(mesas, cliente).Realizar();                  
+                    new RealizaPedido(mesas, cliente, cardapio).Realizar();                  
                     ContinuaWhile = false;
                     break;
                 case -1:

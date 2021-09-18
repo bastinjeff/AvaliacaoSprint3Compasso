@@ -10,7 +10,7 @@ namespace SistemaLancheria
 	{
 		public double ValorTotal { get; private set; }
 
-		public List<Produto> ListaProdutos { get; }
+		public List<Produto> ListaProdutos { get; private set; }
 
 		public Pedido()
 		{
@@ -19,6 +19,7 @@ namespace SistemaLancheria
 
 		public int AdicionarProduto(Produto ProdutoNovo)
 		{
+
 			if (AdicionarListaProdutos(ProdutoNovo))
 			{
 				ValorTotal += ProdutoNovo.ValorUnitario;
@@ -34,14 +35,26 @@ namespace SistemaLancheria
 		{
 			try
 			{
-				ListaProdutos.Add(ProdutoNovo);
+				if (ListaProdutos.Contains(ProdutoNovo))
+				{
+					ListaProdutos.Find((x) => x == ProdutoNovo).QuantidadeAtual++;
+				}
+				else
+				{
+					ListaProdutos.Add(ProdutoNovo);
+					ListaProdutos.Find((x) => x == ProdutoNovo).QuantidadeAtual++;
+				}
 				return true;
 			}catch(Exception e)
 			{
 				Console.WriteLine("Ocorreu um erro ao tentar adicionar à lista de produtos");
 				return false;
-			}
-				
+			}				
+		}
+
+		public void OrdenarLista()
+		{
+			ListaProdutos = ListaProdutos.OrderBy((x) => x.CodigoDoProduto).ToList();
 		}
 	}
 }

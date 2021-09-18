@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WYTifcDp2AMFbzFUm2TzA0qszcCUXpbf0o9rDDw5wBVD9RwPBPlgFydXuLqZniAVcuRIiTYr7z3b1nHzVmGw/Q==",
+  "dgSpecHash": "GjqXS4xmLyio4TdbOjfzsgaFAwoqj5ElZzOl38cMzE1VT3MfB30A2KkS4nwxk+qrAJRdhTRUqICvX5czGcaEBA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jrfri\\Documents\\GitHub\\AvaliacaoSprint3Compasso\\Atividade2LeituraJSON\\Atividade2LeituraJSON\\Atividade2LeituraJSON.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jrfri\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

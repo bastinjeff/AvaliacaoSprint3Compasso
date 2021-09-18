@@ -7,7 +7,7 @@ namespace Atividade2LeituraJSON
 	{
 		static async Task Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			new SistemaBase().Inicio();
 		}
 	}
 }

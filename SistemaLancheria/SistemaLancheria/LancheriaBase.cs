@@ -21,10 +21,9 @@ namespace SistemaLancheria
 		public void IniciarSistema()
 		{
             MenuInicial();
-        #if DEBUG_FIM_MENU
-            Console.WriteLine("Fim do Programa, tecle enter para fechar");
+            Console.Clear();
+            Console.WriteLine("<Fim do Programa, tecle enter para fechar>");
             Console.ReadLine();
-        #endif
 		}
 
         void MenuInicial()

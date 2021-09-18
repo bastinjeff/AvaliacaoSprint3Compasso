@@ -21,12 +21,11 @@ namespace SistemaLancheria
 			ListaProdutos = new List<Produto>();
 		}
 
-		public int AdicionarProduto(Produto ProdutoNovo)
+		public int AdicionarProduto(Produto ProdutoNovo, int Quantidade)
 		{
-
-			if (AdicionarListaProdutos(ProdutoNovo))
+			if (AdicionarListaProdutos(ProdutoNovo, Quantidade))
 			{
-				ValorTotal += ProdutoNovo.ValorUnitario;
+				ValorTotal += ProdutoNovo.ValorUnitario * Quantidade;
 				return 1;
 			}
 			else
@@ -35,18 +34,18 @@ namespace SistemaLancheria
 			}
 		}
 
-		public bool AdicionarListaProdutos(Produto ProdutoNovo)
+		public bool AdicionarListaProdutos(Produto ProdutoNovo, int Quantidade)
 		{
 			try
 			{
 				if (ListaProdutos.Contains(ProdutoNovo))
 				{
-					ListaProdutos.Find((x) => x == ProdutoNovo).QuantidadeAtual++;
+					ListaProdutos.Find((x) => x == ProdutoNovo).QuantidadeAtual+= Quantidade;
 				}
 				else
 				{
 					ListaProdutos.Add(ProdutoNovo);
-					ListaProdutos.Find((x) => x == ProdutoNovo).QuantidadeAtual++;
+					ListaProdutos.Find((x) => x == ProdutoNovo).QuantidadeAtual+= Quantidade;
 				}
 				return true;
 			}catch(Exception e)

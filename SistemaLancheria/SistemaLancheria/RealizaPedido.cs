@@ -26,74 +26,72 @@ namespace SistemaLancheria
 			EscolheMesa();
 			EscolheProdutos();
 			ExibeJSONPedido();
-		}
-
-		void ExibeJSONPedido()
-		{
-			Console.Clear();			
-			var PedidoSerializadoWebScript = new JavaScriptSerializer().Serialize(ClienteAtual.PedidoCliente);
-			Console.ForegroundColor = ConsoleColor.Red;
-			Console.WriteLine("Apresentando JSON usando JavaScriptSerializer:");
-			Console.ForegroundColor = ConsoleColor.White;
-			Console.WriteLine(PedidoSerializadoWebScript);
-			Console.WriteLine();
-
-			Console.ForegroundColor = ConsoleColor.Red;
-			Console.WriteLine("Apresentando JSON usando NewtonSoft (Formatado a partir da string JSON anterior):");
-			Console.ForegroundColor = ConsoleColor.White;
-			var Token = JToken.Parse(PedidoSerializadoWebScript);
-			Console.WriteLine(Token.ToString(Formatting.Indented));
-			Console.WriteLine();
-
-			Console.WriteLine("<Pressione Enter para continuar>");
-			Console.ReadLine();
-
-		}
+		}		
 
 		void EscolheProdutos()
 		{
 			bool ContinuaLoopEscolhaProduto = true;
-			bool ContinuaLoopPedidos = true;
+			bool ContinuaLoopQuantia = true;
 			do
 			{
-				do
+				Console.Clear();
+
+				ExibeOpcoesProdutos();
+				Console.WriteLine();
+				Console.WriteLine("Informe o Código:");
+				int IDProduto = 0;
+				int Retorno = SwitchCaseGenerico(ref IDProduto);
+				if (Retorno == 1)
 				{
-					Console.Clear();
 
-					ExibeOpcoesProdutos();
-					Console.WriteLine();
-					Console.WriteLine("Informe o Código:");
-					int IDProduto = 0;
-					int Retorno = SwitchCaseGenerico(ref ContinuaLoopEscolhaProduto, ref IDProduto);
-					if(Retorno == 1)
+					if (cardapio.ListaDeProdutos.ContainsKey(IDProduto) && IDProduto != 999)
 					{
-						if (cardapio.ListaDeProdutos.ContainsKey(IDProduto) && IDProduto != 999)
+						int Quantidade = -1;
+						do
 						{
+							PedeQuantia(ref ContinuaLoopQuantia, IDProduto, ref Quantidade);
 
-							ClienteAtual.PedidoCliente.AdicionarProduto(cardapio.ListaDeProdutos[IDProduto]);
-							Console.WriteLine("Produto Adicionado no pedido com sucesso!");
-							Console.WriteLine("<Pressione Enter para Continuar>");
-							Console.ReadLine();
-						}
-						else if(IDProduto == 999)
-						{
-							Console.WriteLine("Finalizando Pedido");
-							Console.WriteLine("<Pressione Enter para Continuar>");
-							Console.ReadLine();
-							ContinuaLoopEscolhaProduto = false;
-							ContinuaLoopPedidos = false;
-						}
-						else
-						{
-							ExibeErroForaDasOpcoes();
-						}
+						} while (ContinuaLoopQuantia);
+						ClienteAtual.PedidoCliente.AdicionarProduto(cardapio.ListaDeProdutos[IDProduto], Quantidade);
+						Console.WriteLine("Produto Adicionado no pedido com sucesso!");
+						Console.WriteLine("<Pressione Enter para Continuar>");
+						Console.ReadLine();
 					}
-					
-				} while (ContinuaLoopEscolhaProduto);
-			} while (ContinuaLoopPedidos);
+					else if (IDProduto == 999)
+					{
+						Console.WriteLine("Finalizando Pedido");
+						Console.WriteLine("<Pressione Enter para Continuar>");
+						Console.ReadLine();
+						ContinuaLoopEscolhaProduto = false;
+					}
+					else
+					{
+						ExibeErroForaDasOpcoes();
+					}
+				}
+
+			} while (ContinuaLoopEscolhaProduto);
 			Console.Clear();
 			ExibePedido();
 			Console.WriteLine("<Pressione Enter para Continuar");
+			Console.ReadLine();
+		}
+
+		private void PedeQuantia(ref bool ContinuaLoopQuantia, int IDProduto, ref int Quantidade)
+		{
+			Console.Clear();
+			Console.WriteLine("Informe a quantidade de {0} desejada: ", cardapio.ListaDeProdutos[IDProduto].DescricaoProduto);
+			int RetornoQuantidade = SwitchCaseGenerico(ref Quantidade);
+			if (RetornoQuantidade == 1 && Quantidade != 0)
+			{
+				ContinuaLoopQuantia = false;
+			}
+			else if (Quantidade == 0 && RetornoQuantidade != -1)
+			{
+				Console.WriteLine("Zero não é uma quantidade válida");
+				Console.WriteLine("<Pressione Enter para Continuar>");
+				Console.ReadLine();
+			}
 		}
 
 		void ExibePedido()
@@ -132,7 +130,7 @@ namespace SistemaLancheria
 					Console.WriteLine();
 					Console.Write("Qual o numero da Mesa?: ");
 					int MesaEscolhida = 0;
-					int Retorno = SwitchCaseGenerico(ref ContinuaWhile, ref MesaEscolhida);
+					int Retorno = SwitchCaseGenerico(ref MesaEscolhida);
 					if(Retorno == 1)
 					{
 						if (!mesas.Mesa.ContainsKey(MesaEscolhida))
@@ -166,7 +164,7 @@ namespace SistemaLancheria
 			}
 		}
 
-		int SwitchCaseGenerico(ref bool ContinuaWhile, ref int OpcaoEscolhida)
+		int SwitchCaseGenerico(ref int OpcaoEscolhida)
 		{
 			try
 			{
@@ -209,6 +207,28 @@ namespace SistemaLancheria
 				return 1;
 			}
 			else return -1;
+		}
+
+		void ExibeJSONPedido()
+		{
+			Console.Clear();
+			var PedidoSerializadoWebScript = new JavaScriptSerializer().Serialize(ClienteAtual.PedidoCliente);
+			Console.ForegroundColor = ConsoleColor.Red;
+			Console.WriteLine("Apresentando JSON usando JavaScriptSerializer:");
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.WriteLine(PedidoSerializadoWebScript);
+			Console.WriteLine();
+
+			Console.ForegroundColor = ConsoleColor.Red;
+			Console.WriteLine("Apresentando JSON usando NewtonSoft (Formatado a partir da string JSON anterior):");
+			Console.ForegroundColor = ConsoleColor.White;
+			var Token = JToken.Parse(PedidoSerializadoWebScript);
+			Console.WriteLine(Token.ToString(Formatting.Indented));
+			Console.WriteLine();
+
+			Console.WriteLine("<Pressione Enter para continuar>");
+			Console.ReadLine();
+
 		}
 
 		void ExibeMesas()
